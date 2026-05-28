@@ -56,7 +56,7 @@ function mostrarPets(){
 
     listaPets.innerHTML = "";
 
-    pets.forEach((pet) => {
+    pets.forEach((pet, index) => {
 
         listaPets.innerHTML += `
         
@@ -65,9 +65,28 @@ function mostrarPets(){
             <p><strong>Nome:</strong> ${pet.nome}</p>
             <p><strong>Espécie:</strong> ${pet.especie}</p>
 
+            <button onclick="excluirPet(${index})">
+                Excluir
+            </button>
+
         </div>
         
         `;
+    });
+
+}
+
+function excluirPet(index){
+
+    pets.splice(index, 1);
+
+    localStorage.setItem("pets", JSON.stringify(pets));
+
+    mostrarPets();
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Pet removido!'
     });
 
 }
