@@ -64,6 +64,10 @@ function mostrarPets(){
 
             <p><strong>Nome:</strong> ${pet.nome}</p>
             <p><strong>Espécie:</strong> ${pet.especie}</p>
+            <p><strong>Raça:</strong> ${pet.raca}</p>
+            <p><strong>Idade:</strong> ${pet.idade} anos</p>
+            <p><strong>Peso:</strong> ${pet.peso} kg</p>
+            <p><strong>Tutor:</strong> ${pet.tutor}</p>
 
             <button onclick="excluirPet(${index})">
                 Excluir
