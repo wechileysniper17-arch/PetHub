@@ -1,0 +1,204 @@
+@font-face {
+src: url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
+font-family: winkle;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(background.jpg);
+    color: #1f1f1f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header{
+    background-color: #004d40;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: winkle;
+    font-size: 35px;
+    color: #004d40;
+}
+
+.logo{
+    margin: 0;
+    font-family: winkle;
+    font-size: 35px;
+    color: white;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.criarconta {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: #004d40;
+}
+
+.container nav a{
+    color: #004d40;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.home{
+    padding: 50px 8%;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.banner h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.banner p{
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 550px;
+}
+
+.imagem-banner{
+    font-size: 100px;
+}
+
+.botao,
+button{
+    background-color: #004d40;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao:hover,
+button:hover{
+    background-color: #00796b;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+}
+
+.card,
+.pet-card{
+    background-color: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    margin-top: 15px;
+}
+
+.card h3{
+    margin-bottom: 10px;
+}
+
+.container{
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.container h1,
+.container h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container nav{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+p{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.pet-card button{
+    margin-top: 12px;
+    background-color: #b00020;
+}
+
+.pet-card button:hover{
+    background-color: #d32f2f;
+}
+
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a{
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner h2{
+        font-size: 32px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .imagem-banner{
+        font-size: 70px;
+    }
+}
