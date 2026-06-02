@@ -2,47 +2,166 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 body{
-    background-color: #f5f5f5;
+    background-color: #f7efe6;
+    color: #1f1f1f;
+}
+
+header{
+    background-color: #004d40;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin-bottom: 0;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.home{
+    padding: 50px 8%;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.banner h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.banner p{
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.imagem-banner{
+    font-size: 100px;
+}
+
+.botao,
+button{
+    background-color: #004d40;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao:hover,
+button:hover{
+    background-color: #00796b;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+}
+
+.card,
+.pet-card{
+    background-color: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    margin-top: 15px;
 }
 
 .container{
     width: 90%;
     max-width: 600px;
-    margin: 30px auto;
+    margin: 40px auto;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 }
 
-h1{
+.container h1,
+.container h2{
     text-align: center;
     margin-bottom: 20px;
+}
+
+.container nav{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container nav a{
+    color: #004d40;
+    margin: 0 5px;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 input{
-    padding: 10px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-button{
-    padding: 10px;
-    background-color: green;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.pet-card{
-    background-color: #eee;
-    padding: 10px;
+p{
     margin-top: 10px;
 }
+
+a{
+    color: #004d40;
+    font-weight: bold;
+}
+
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a{
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner h2{
+        font-size: 32px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+}
+  
