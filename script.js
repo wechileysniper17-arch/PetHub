@@ -5,8 +5,7 @@ let pets = JSON.parse(localStorage.getItem("pets")) || [];
 
 mostrarPets();
 
-form.addEventListener("submit", function(event){
-
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const nome = document.getElementById("nome").value;
@@ -16,12 +15,11 @@ form.addEventListener("submit", function(event){
     const peso = document.getElementById("peso").value;
     const tutor = document.getElementById("tutor").value;
 
-    if(nome.length < 2){
-
+    if (nome.length < 2) {
         Swal.fire({
-            icon: 'error',
-            title: 'Erro',
-            text: 'Nome inválido!'
+            icon: "error",
+            title: "Erro",
+            text: "Nome inválido!"
         });
 
         return;
@@ -41,47 +39,43 @@ form.addEventListener("submit", function(event){
     localStorage.setItem("pets", JSON.stringify(pets));
 
     Swal.fire({
-        icon: 'success',
-        title: 'Sucesso!',
-        text: 'Pet cadastrado!'
+        icon: "success",
+        title: "Sucesso!",
+        text: "Pet cadastrado!"
     });
 
     form.reset();
 
     mostrarPets();
-
 });
 
-function mostrarPets(){
-
+function mostrarPets() {
     listaPets.innerHTML = "";
 
+    if (pets.length === 0) {
+        listaPets.innerHTML = "<p>Nenhum pet cadastrado ainda.</p>";
+        return;
+    }
+
     pets.forEach((pet, index) => {
-
         listaPets.innerHTML += `
-        
-        <div class="pet-card">
+            <div class="pet-card">
+                <p><strong>Nome:</strong> ${pet.nome}</p>
+                <p><strong>Espécie:</strong> ${pet.especie}</p>
+                <p><strong>Raça:</strong> ${pet.raca}</p>
+                <p><strong>Idade:</strong> ${pet.idade} anos</p>
+                <p><strong>Peso:</strong> ${pet.peso} kg</p>
+                <p><strong>Tutor:</strong> ${pet.tutor}</p>
 
-            <p><strong>Nome:</strong> ${pet.nome}</p>
-            <p><strong>Espécie:</strong> ${pet.especie}</p>
-            <p><strong>Raça:</strong> ${pet.raca}</p>
-            <p><strong>Idade:</strong> ${pet.idade} anos</p>
-            <p><strong>Peso:</strong> ${pet.peso} kg</p>
-            <p><strong>Tutor:</strong> ${pet.tutor}</p>
-
-            <button onclick="excluirPet(${index})">
-                Excluir
-            </button>
-
-        </div>
-        
+                <button onclick="excluirPet(${index})">
+                    Excluir
+                </button>
+            </div>
         `;
     });
-
 }
 
-function excluirPet(index){
-
+function excluirPet(index) {
     pets.splice(index, 1);
 
     localStorage.setItem("pets", JSON.stringify(pets));
@@ -89,8 +83,7 @@ function excluirPet(index){
     mostrarPets();
 
     Swal.fire({
-        icon: 'success',
-        title: 'Pet removido!'
+        icon: "success",
+        title: "Pet removido!"
     });
-
 }
