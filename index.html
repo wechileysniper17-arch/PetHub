@@ -6,40 +6,68 @@
     <title>PetHub</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-    <div class="container">
+    <header>
 
         <h1>🐾 PetHub</h1>
 
-        <form id="formPet">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="criar-conta.html">Criar Conta</a>
+            <a href="conta.html">Minha Conta</a>
+            <a href="cadastro-pet.html">Cadastrar Pet</a>
+        </nav>
 
-            <input type="text" id="nome" placeholder="Nome do Pet" required>
+    </header>
 
-            <input type="text" id="especie" placeholder="Espécie" required>
+    <main class="home">
 
-            <input type="text" id="raca" placeholder="Raça" required>
+        <section class="banner">
 
-            <input type="number" id="idade" placeholder="Idade" required>
+            <div>
 
-            <input type="number" id="peso" placeholder="Peso" required>
+                <h2>Cuidar do seu pet ficou mais fácil</h2>
 
-            <input type="text" id="tutor" placeholder="Nome do Tutor" required>
+                <p>
+                    Organize informações dos seus animais,
+                    cadastre pets e acompanhe tudo em um só lugar.
+                </p>
 
-            <button type="submit">Cadastrar Pet</button>
+                <a href="criar-conta.html" class="botao">
+                    Começar Agora
+                </a>
 
-        </form>
+            </div>
 
-        <h2>Pets Cadastrados</h2>
+            <div class="imagem-banner">
+                🐶 🐱
+            </div>
 
-        <div id="listaPets"></div>
+        </section>
 
-    </div>
+        <section class="cards">
 
-    <script src="script.js"></script>
+            <div class="card">
+                <h3>Cadastro de Pets</h3>
+                <p>Registre informações dos seus animais.</p>
+            </div>
+
+            <div class="card">
+                <h3>Organização</h3>
+                <p>Mantenha todos os dados em um só lugar.</p>
+            </div>
+
+            <div class="card">
+                <h3>Facilidade</h3>
+                <p>Interface simples e intuitiva.</p>
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
